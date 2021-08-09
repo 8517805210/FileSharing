@@ -5,21 +5,16 @@ const PORT = process.env.PORT || 3000;
 const path = require('path');
 const cors = require('cors');
 console.log( process.env.ALLOWED_CLIENTS);
-// Cors 
+Cors 
 // const corsOptions = {
 //   origin: process.env.ALLOWED_CLIENTS.split(',')
 //   // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
 // }
+const corsOptions={
+    origin: "*"
+}
 
-// Default configuration looks like
-// {
-//     "origin": "*",
-//     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-//     "preflightContinue": false,
-//     "optionsSuccessStatus": 204
-//   }
-
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.static('./public'));
 app.use(express.static('./public/frontend'));
 const connectDB = require('./config/db');
