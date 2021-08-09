@@ -4,8 +4,7 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-   "start": "node server.js"
-
+    "start": "node server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -17,7 +16,5 @@
     "nodemailer": "^6.4.11",
     "uuid": "^8.3.0"
   },
-  "devDependencies": {
-   
-  }
+  "devDependencies": {}
 }
