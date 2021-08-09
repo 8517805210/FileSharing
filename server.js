@@ -21,7 +21,7 @@ console.log( process.env.ALLOWED_CLIENTS);
 
 app.use(cors());
 app.use(express.static('./public'));
-app.use(express.static('./public/InShare-master'));
+app.use(express.static('./public/frontend'));
 const connectDB = require('./config/db');
 connectDB();
 
