@@ -15,7 +15,7 @@ const emailForm = document.querySelector("#emailForm");
 
 const toast = document.querySelector(".toast");
 
-const baseURL = "https://sharefilelink.herokuapp.com/";
+const baseURL = "https://sharefilelink.herokuapp.com";
 const uploadURL = `${baseURL}/api/files`;
 const emailURL = `${baseURL}/api/files/send`;
 
@@ -120,6 +120,8 @@ const uploadFile = () => {
 const onFileUploadSuccess = (res) => {
   fileInput.value = ""; // reset the input
   status.innerText = "Uploaded";
+
+  console.log(res);
 
   // remove the disabled attribute from form btn & make text send
   emailForm[2].removeAttribute("disabled");
